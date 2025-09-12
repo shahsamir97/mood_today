@@ -1,0 +1,19 @@
+{
+  "startButton": "শুরু",
+  "nextButton": "পরবর্তী",
+  "backToHomeButton": "হোমে ফিরে যান",
+  "homeScreenTitle": "মুড টুডে-তে স্বাগতম",
+  "homeScreenBodyText": "আপনার দৈনন্দিন সঙ্গী মেজাজ ট্র্যাক এবং উন্নত করার জন্য। আরও সুখী আপনি হওয়ার যাত্রা শুরু করুন!",
+  "selectAnswerError": "আগে উত্তর নির্বাচন করুন তারপর এগিয়ে যান।",
+  "yourResult": "আপনার ফলাফল",
+  "quizCompletionMessage": "আপনি কুইজ সম্পন্ন করেছেন! এখানে আপনার ফলাফল:",
+  "@quizCompletionMessage": {
+    "description": "কুইজ সম্পন্ন করার পর স্কোরসহ বার্তা",
+    "placeholders": {
+      "score": {
+        "type": "int",
+        "example": "85"
+      }
+    }
+  }
+}

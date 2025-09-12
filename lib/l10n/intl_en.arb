@@ -1,0 +1,19 @@
+{
+  "startButton": "Start",
+  "nextButton": "Next",
+  "backToHomeButton": "Back to Home",
+  "homeScreenTitle": "Welcome to Mood Today",
+  "homeScreenBodyText": "Your daily companion for tracking and enhancing your mood. Start your journey towards a happier you!",
+  "selectAnswerError": "Please select an answer to proceed.",
+  "yourResult": "Your Result",
+  "quizCompletionMessage": "You have completed the quiz! Here are your result: {score}",
+  "@quizCompletionMessage": {
+    "description": "Message shown after completing quiz with score",
+    "placeholders": {
+      "score": {
+        "type": "int",
+        "example": "85"
+      }
+    }
+  }
+}

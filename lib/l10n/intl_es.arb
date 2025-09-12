@@ -1,0 +1,19 @@
+{
+  "startButton": "Iniciar",
+  "nextButton": "Siguiente",
+  "backToHomeButton": "Volver al inicio",
+  "homeScreenTitle": "Bienvenido a Mood Today",
+  "homeScreenBodyText": "Tu compañero diario para seguir y mejorar tu estado de ánimo. ¡Comienza tu viaje hacia una versión más feliz de ti!",
+  "selectAnswerError": "Por favor, seleccione una respuesta antes de continuar.",
+  "yourResult": "Tu resultado",
+  "quizCompletionMessage": "¡Has completado el cuestionario! Aquí están tus resultados: {score}",
+  "@quizCompletionMessage": {
+    "description": "Mensaje mostrado después de completar el cuestionario con puntaje",
+    "placeholders": {
+      "score": {
+        "type": "int",
+        "example": "85"
+      }
+    }
+  }
+}
