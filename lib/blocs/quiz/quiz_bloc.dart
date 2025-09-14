@@ -8,6 +8,7 @@ class QuizBloc extends Bloc<QuizEvent, QuizState> {
     on<NextQuestionEvent>(_onNextQuestion);
     on<SelectAnswerEvent>(_onSelectAnswer);
     on<ResetQuizEvent>(_onResetQuiz);
+    on<OnLanguageChangeEvent>(_onLanguageChange);
   }
 
   void _onNextQuestion(NextQuestionEvent event, Emitter<QuizState> emit) {
@@ -38,5 +39,9 @@ class QuizBloc extends Bloc<QuizEvent, QuizState> {
 
   void _onResetQuiz(ResetQuizEvent event, Emitter<QuizState> emit) {
     emit(QuizState.initial());
+  }
+
+  void _onLanguageChange(OnLanguageChangeEvent event, Emitter<QuizState> emit) {
+    emit(state.copyWith(selectedLocale: event.locale));
   }
 }

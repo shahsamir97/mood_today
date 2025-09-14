@@ -39,16 +39,17 @@ class _QuizScreenState extends State<QuizScreen> {
                   children: [
                     RadioGroup<String>(
                       groupValue: state.selectedAnswer,
-                      onChanged: (String? value) {
-                        context.read<QuizBloc>().add(
-                          SelectAnswerEvent(value ?? ""),
-                        );
-                      },
+                      onChanged: (String? value) {  },
                       child: Column(
                         children: state.answerOptions.map((option) {
                           return ListTile(
                             title: Text(option),
                             leading: Radio<String>(value: option),
+                            onTap: () {
+                              context.read<QuizBloc>().add(
+                                SelectAnswerEvent(option),
+                              );
+                            },
                           );
                         }).toList(),
                       ),

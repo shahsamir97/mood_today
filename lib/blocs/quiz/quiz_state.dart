@@ -1,4 +1,4 @@
-import 'dart:ffi';
+import 'dart:ui';
 
 class QuizState {
   final int currentQuestionIndex;
@@ -8,6 +8,13 @@ class QuizState {
   final bool showError;
   final isAnswerSelected;
   final String selectedAnswer;
+  final Locale selectedLocale;
+
+  final supportedLocales = [
+    Locale('en'),
+    Locale('es'),
+    Locale('bn'),
+  ];
 
   final List totalQuestions = [
     "How was your day?",
@@ -26,7 +33,7 @@ class QuizState {
   ];
 
   factory QuizState.initial() {
-    return QuizState(0, {}, false, "Next", false, false, "");
+    return QuizState(0, {}, false, "Next", false, false, "", Locale('en') );
   }
 
   QuizState copyWith({
@@ -36,6 +43,7 @@ class QuizState {
       String? buttonText,
      bool? showError,
       String? selectedAnswer,
+    Locale? selectedLocale,
     }) {
       return QuizState(
         currentQuestionIndex ?? this.currentQuestionIndex,
@@ -44,7 +52,8 @@ class QuizState {
         buttonText ?? this.buttonText,
         showError ?? this.showError,
         isAnswerSelected,
-        selectedAnswer ?? this.selectedAnswer
+        selectedAnswer ?? this.selectedAnswer,
+        selectedLocale ?? this.selectedLocale
       );
     }
 
@@ -54,6 +63,7 @@ class QuizState {
       this.buttonText,
       this.showError,
       this.isAnswerSelected,
-      this.selectedAnswer
+      this.selectedAnswer,
+      this.selectedLocale
       );
 }

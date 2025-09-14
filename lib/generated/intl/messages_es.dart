@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "backToHomeButton": MessageLookupByLibrary.simpleMessage(
       "Volver al inicio",
     ),
+    "chooseLanguage": MessageLookupByLibrary.simpleMessage("Elegir idioma"),
     "homeScreenBodyText": MessageLookupByLibrary.simpleMessage(
       "Tu compañero diario para seguir y mejorar tu estado de ánimo. ¡Comienza tu viaje hacia una versión más feliz de ti!",
     ),

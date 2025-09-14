@@ -34,4 +34,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String quizCompletionMessage(int score) {
     return 'You have completed the quiz! Here are your result: $score';
   }
+
+  @override
+  String get chooseLanguage => 'Choose language';
 }

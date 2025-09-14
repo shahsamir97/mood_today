@@ -34,4 +34,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String quizCompletionMessage(int score) {
     return 'আপনি কুইজ সম্পন্ন করেছেন! এখানে আপনার ফলাফল:';
   }
+
+  @override
+  String get chooseLanguage => 'ভাষা নির্বাচন করুন';
 }

@@ -147,6 +147,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'You have completed the quiz! Here are your result: {score}'**
   String quizCompletionMessage(int score);
+
+  /// No description provided for @chooseLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose language'**
+  String get chooseLanguage;
 }
 
 class _AppLocalizationsDelegate

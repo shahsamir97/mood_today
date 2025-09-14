@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:mood_today/blocs/quiz/quiz_bloc.dart';
 import 'package:mood_today/blocs/quiz/quiz_state.dart';
 import 'package:mood_today/l10n/intl_localizations.dart';
@@ -18,36 +17,33 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
-      ),
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
+    return BlocBuilder<QuizBloc, QuizState>(builder: (context, state) =>
+       MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
+        ),
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: state.supportedLocales,
+        locale: state.selectedLocale,
+        home: BlocListener<QuizBloc, QuizState>(
+          listener: (context, state) {
+            if (state.isQuizCompleted) {
+              context.read<QuizBloc>().add(ResetQuizEvent());
 
-      supportedLocales: [
-        Locale('en', 'US'),
-        Locale('es', 'ES'),
-        Locale('bn', 'BD'),
-      ],
-      locale: Locale('bn', 'BD'),
-      home: BlocListener<QuizBloc, QuizState>(
-        listener: (context, state) {
-          if (state.isQuizCompleted) {
-            context.read<QuizBloc>().add(ResetQuizEvent());
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ResultScreen(title: 'Result Screen'),
+                ),
+              );
+            } else if(state == QuizState.initial()) {
 
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ResultScreen(title: 'Result Screen'),
-              ),
-            );
-          } else if(state == QuizState.initial()) {
-
-          }
-        },
-        child: const HomeScreen(title: 'Flutter Demo Home Page'),
-      ),
+            }
+          },
+          child: const HomeScreen(title: 'Flutter Demo Home Page'),
+        ),
+      )
     );
   }
 }

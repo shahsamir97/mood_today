@@ -118,6 +118,16 @@ class S {
       args: [score],
     );
   }
+
+  /// `Choose language`
+  String get chooseLanguage {
+    return Intl.message(
+      'Choose language',
+      name: 'chooseLanguage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

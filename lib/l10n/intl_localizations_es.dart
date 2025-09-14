@@ -35,4 +35,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String quizCompletionMessage(int score) {
     return '¡Has completado el cuestionario! Aquí están tus resultados: $score';
   }
+
+  @override
+  String get chooseLanguage => 'Elegir idioma';
 }

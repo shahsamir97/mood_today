@@ -25,6 +25,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "backToHomeButton": MessageLookupByLibrary.simpleMessage("হোমে ফিরে যান"),
+    "chooseLanguage": MessageLookupByLibrary.simpleMessage(
+      "ভাষা নির্বাচন করুন",
+    ),
     "homeScreenBodyText": MessageLookupByLibrary.simpleMessage(
       "আপনার দৈনন্দিন সঙ্গী মেজাজ ট্র্যাক এবং উন্নত করার জন্য। আরও সুখী আপনি হওয়ার যাত্রা শুরু করুন!",
     ),
