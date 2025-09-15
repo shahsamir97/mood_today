@@ -14,6 +14,7 @@ class QuizState {
     Locale('en'),
     Locale('es'),
     Locale('bn'),
+    Locale('fr'),
   ];
 
   final List totalQuestions = [

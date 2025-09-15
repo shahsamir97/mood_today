@@ -1,0 +1,21 @@
+{
+  "startButton": "Commencer",
+  "nextButton": "Suivant",
+  "backToHomeButton": "Retour à l'accueil",
+  "homeScreenTitle": "Bienvenue dans Mood Today",
+  "homeScreenBodyText": "Votre compagnon quotidien pour suivre et améliorer votre humeur. Commencez votre voyage vers une version plus heureuse de vous-même !",
+  "selectAnswerError": "Veuillez sélectionner une réponse pour continuer.",
+  "yourResult": "Votre résultat",
+  "quizCompletionMessage": "Vous avez terminé le quiz ! Voici votre résultat : {score}",
+  "@quizCompletionMessage": {
+    "description": "Message affiché après avoir terminé le quiz avec le score",
+    "placeholders": {
+      "score": {
+        "type": "int",
+        "example": "85"
+      }
+    }
+  },
+  "chooseLanguage": "Choisir la langue"
+}
+
