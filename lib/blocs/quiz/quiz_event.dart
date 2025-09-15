@@ -18,3 +18,7 @@ class OnLanguageChangeEvent extends QuizEvent {
 
   OnLanguageChangeEvent(this.locale);
 }
+
+class LoadQuestionsEvent extends QuizEvent {}
+
+class AnalyzeMoodEvent extends QuizEvent {}

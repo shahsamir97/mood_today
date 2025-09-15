@@ -108,6 +108,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 textStyle: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                               ),
                               onPressed: () {
+                                // Load Gemini questions before navigating
+                                context.read<QuizBloc>().add(LoadQuestionsEvent());
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
