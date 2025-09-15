@@ -9,6 +9,8 @@ import 'intl_localizations_bn.dart';
 import 'intl_localizations_en.dart';
 import 'intl_localizations_es.dart';
 import 'intl_localizations_fr.dart';
+import 'intl_localizations_ja.dart';
+import 'intl_localizations_zh.dart';
 
 // ignore_for_file: type=lint
 
@@ -100,6 +102,8 @@ abstract class AppLocalizations {
     Locale('en'),
     Locale('es'),
     Locale('fr'),
+    Locale('ja'),
+    Locale('zh'),
   ];
 
   /// No description provided for @startButton.
@@ -167,8 +171,14 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) =>
-      <String>['bn', 'en', 'es', 'fr'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>[
+    'bn',
+    'en',
+    'es',
+    'fr',
+    'ja',
+    'zh',
+  ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -185,6 +195,10 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsEs();
     case 'fr':
       return AppLocalizationsFr();
+    case 'ja':
+      return AppLocalizationsJa();
+    case 'zh':
+      return AppLocalizationsZh();
   }
 
   throw FlutterError(

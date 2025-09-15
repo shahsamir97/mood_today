@@ -1,0 +1,21 @@
+{
+  "startButton": "開始",
+  "nextButton": "次へ",
+  "backToHomeButton": "ホームに戻る",
+  "homeScreenTitle": "Mood Todayへようこそ",
+  "homeScreenBodyText": "気分を追跡し、改善するための日常のパートナー。より幸せな自分への旅を始めましょう！",
+  "selectAnswerError": "続行するには回答を選択してください。",
+  "yourResult": "あなたの結果",
+  "quizCompletionMessage": "クイズが完了しました！こちらがあなたの結果です：{score}",
+  "@quizCompletionMessage": {
+    "description": "スコア付きのクイズ完了後に表示されるメッセージ",
+    "placeholders": {
+      "score": {
+        "type": "int",
+        "example": "85"
+      }
+    }
+  },
+  "chooseLanguage": "言語を選択"
+}
+

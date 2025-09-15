@@ -1,0 +1,21 @@
+{
+  "startButton": "开始",
+  "nextButton": "下一个",
+  "backToHomeButton": "返回主页",
+  "homeScreenTitle": "欢迎使用今日心情",
+  "homeScreenBodyText": "您追踪和改善心情的日常伴侣。开始您通往更快乐自我的旅程！",
+  "selectAnswerError": "请选择一个答案后继续。",
+  "yourResult": "您的结果",
+  "quizCompletionMessage": "您已完成问卷！这是您的结果：{score}",
+  "@quizCompletionMessage": {
+    "description": "完成问卷后显示的带有分数的消息",
+    "placeholders": {
+      "score": {
+        "type": "int",
+        "example": "85"
+      }
+    }
+  },
+  "chooseLanguage": "选择语言"
+}
+
